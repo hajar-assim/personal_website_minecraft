@@ -4,7 +4,7 @@ import HungerBar from './HUD/HungerBar';
 import XPBar from './HUD/XPBar';
 import HotBar from './HUD/HotBar';
 
-const MinecraftHUD = ({ level = 3, hearts = 10, hunger = 10, xp = 0.9 }) => {
+const MinecraftHUD = ({ level = 3, hearts = 10, hunger = 5, xp = 0.9 }) => {
   const iconSize = '37px';
 
   return (
@@ -31,7 +31,7 @@ const MinecraftHUD = ({ level = 3, hearts = 10, hunger = 10, xp = 0.9 }) => {
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: '0.5rem',
+          gap: '25px',
           maxWidth: '100%',
           overflowX: 'auto',
         }}
@@ -49,35 +49,55 @@ const MinecraftHUD = ({ level = 3, hearts = 10, hunger = 10, xp = 0.9 }) => {
             imageRendering: 'pixelated',
           }}
         >
-          <div
+          <img
+            src="/assets/level_three.png"
+            alt="container"
             style={{
-              fontFamily: 'Minecraftia',
-              fontSize: '40px',
-              transform: 'translateY(10px)', // shift down just a bit
-              color: '#22c55e',
-              fontWeight: 'bold',
+              position: 'absolute',
               imageRendering: 'pixelated',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
+              marginTop: '-10px',
+              marginLeft: '-20px',
+              zIndex: 30,
             }}
-          >
-            3
-          </div>
+          />
         </div>
 
         <HungerBar hunger={hunger} iconSize={iconSize} />
       </div>
-      <div style={{ marginTop: '-20px' }}>
-        <XPBar xp={0.75} scale={4.5} />
-      </div>
+      <XPBar xp={xp} scale={4.5} />
 
       <HotBar
         hotbar={[
-          { src: '/assets/enchanted_book.png', alt: 'book' },
-          { src: '/assets/iron_sword.png', alt: 'sword' },
-          { src: '/assets/iron_pickaxe.png', alt: 'pickaxe' },
-          { src: '/assets/iron_axe.png', alt: 'axe' },
+          {
+            src: '/assets/player_head.png',
+            alt: 'head',
+            tooltip:
+              '§aStudent Head - §lHajar Assim\n§7Software Engineering\n§3Year III\n§9§oWrites code that compiles *and* runs',
+          },
+          {
+            src: '/assets/enchanted_book.png',
+            alt: 'book',
+            tooltip:
+              '§dEnchanted Book of Study\n§7Carleton University\n§7B.Eng Software Engineering\n§32021–2026',
+          },
+          {
+            src: '/assets/iron_sword.png',
+            alt: 'sword',
+            tooltip:
+              '§cSword of Deployment\n§7Docker · AWS · Datadog · Git · Linux · Jenkins · GitHub Actions · PostgreSQL\n§9§o100% test coverage... allegedly',
+          },
+          {
+            src: '/assets/iron_pickaxe.png',
+            alt: 'pickaxe',
+            tooltip:
+              '§bPickaxe of Logic\n§7Java · C · Python · HTML/CSS · JavaScript · TypeScript · SQL · Go · Racket\n§9§oFor mining through complexity',
+          },
+          {
+            src: '/assets/iron_axe.png',
+            alt: 'axe',
+            tooltip:
+              '§6Axe of Abstraction\n§7Spring Boot · React · Jest · Cypress · NumPy · Matplotlib · SciPy\n§9§oLeave no legacy code behind',
+          },
         ]}
         scale={4.5}
       />
