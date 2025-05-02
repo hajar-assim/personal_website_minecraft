@@ -5,9 +5,7 @@
 
 body {
   font-family: 'Minecraftia', monospace;
-  cursor:
-    url('/assets/crosshair.png') 12 12,
-    auto;
+  cursor: crosshair;
 }
 
 * {

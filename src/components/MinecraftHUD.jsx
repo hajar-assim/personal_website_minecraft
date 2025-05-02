@@ -1,8 +1,8 @@
 import React from 'react';
-import HeartBar from './HUD/HeartBar';
-import HungerBar from './HUD/HungerBar';
-import XPBar from './HUD/XPBar';
-import HotBar from './HUD/HotBar';
+import HeartBar from './hud/HeartBar';
+import HungerBar from './hud/HungerBar';
+import XPBar from './hud/XPBar';
+import HotBar from './hud/HotBar';
 
 const MinecraftHUD = ({ level = 3, hearts = 10, hunger = 5, xp = 0.9 }) => {
   const iconSize = '37px';
