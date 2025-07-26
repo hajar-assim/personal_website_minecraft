@@ -149,6 +149,7 @@ const TabLayout = ({ backgroundAudioRef }) => {
               >
                 <img
                   src={tabImg}
+                  draggable={false}
                   alt={tab.label}
                   style={{
                     position: 'absolute',
@@ -160,6 +161,7 @@ const TabLayout = ({ backgroundAudioRef }) => {
                 <img
                   src={tab.icon}
                   alt={tab.label}
+                  draggable={false}
                   style={{
                     position: 'relative',
                     width: `${iconSize}px`,

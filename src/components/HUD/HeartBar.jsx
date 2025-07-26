@@ -17,6 +17,7 @@ const HeartBar = ({ hearts, iconSize }) => (
         <img
           src="/assets/icons/heart-empty.png"
           alt="container"
+          draggable={false}
           style={{
             position: 'absolute',
             top: 0,
@@ -30,6 +31,7 @@ const HeartBar = ({ hearts, iconSize }) => (
           <img
             src="/assets/icons/heart.png"
             alt="heart"
+            draggable={false}
             style={{
               position: 'absolute',
               top: 0,

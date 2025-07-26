@@ -6,6 +6,7 @@ function Crafting() {
       <img
         src="/assets/ui/crafting/crafting_table.png"
         alt="search"
+        draggable={false}
         style={{
           zoom: 3,
           imageRendering: 'pixelated',

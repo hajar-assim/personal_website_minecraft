@@ -13,6 +13,7 @@ const HotBar = ({ hotbar, scale = 2 }) => {
       <img
         src="/assets/ui/hotbar.png"
         alt="hotbar"
+        draggable={false}
         style={{
           position: 'absolute',
           top: 0,
@@ -38,6 +39,7 @@ const HotBar = ({ hotbar, scale = 2 }) => {
           <img
             src={item.src}
             alt={item.alt}
+            draggable={false}
             style={{
               width: '100%',
               height: '100%',

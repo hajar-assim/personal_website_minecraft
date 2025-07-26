@@ -6,8 +6,10 @@ function Contact() {
       <p>feel free to reach out or learn more</p>
       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'left', gap: '2rem' }}>
         <img
+          draggable={false}
           src="/assets/icons/invite.png"
           alt="email"
+          draggable={false}
           style={{
             width: '70px',
             height: '70px',
@@ -19,6 +21,7 @@ function Contact() {
         <img
           src="/assets/icons/linkedin.png"
           alt="linkedin"
+          draggable={false}
           style={{
             width: '70px',
             height: '70px',
@@ -32,6 +35,7 @@ function Contact() {
         <img
           src="/assets/icons/github.svg"
           alt="github"
+          draggable={false}
           style={{
             width: '70px',
             height: '70px',

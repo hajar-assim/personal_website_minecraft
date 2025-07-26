@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import Crafting from '../Crafting';
+import Crafting from '../helpers/Crafting';
 import SearchPanel from './SearchPanel';
 
 function Experience() {
@@ -8,6 +8,11 @@ function Experience() {
 
   useEffect(() => {
     const handleKeyDown = (event) => {
+      const tag = event.target.tagName.toLowerCase();
+      const isTyping = tag === 'input' || tag === 'textarea' || event.target.isContentEditable;
+
+      if (isTyping) return;
+
       if (event.key === 'e' || event.key === 'E') {
         setShowPopup((prev) => !prev);
       }

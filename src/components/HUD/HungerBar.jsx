@@ -17,6 +17,7 @@ const HungerBar = ({ hunger, iconSize }) => (
         <img
           src="/assets/icons/hunger-empty.png"
           alt="container"
+          draggable={false}
           style={{
             position: 'absolute',
             top: 0,
@@ -30,6 +31,7 @@ const HungerBar = ({ hunger, iconSize }) => (
           <img
             src="/assets/icons/hunger.png"
             alt="hunger"
+            draggable={false}
             style={{
               position: 'absolute',
               top: 0,

@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { renderFormattedTooltip, tooltipStyle } from '../helpers/TextStyling';
+import { renderFormattedTooltip, tooltipStyle } from '../../helpers/TextStyling';
 
 const records = [
   {
@@ -163,6 +163,7 @@ const JukeboxPlayer = ({ backgroundAudioRef }) => {
 
       <img
         src="/assets/icons/stop_button.png"
+        draggable={false}
         alt="Stop Disc"
         onClick={stopAudio}
         style={{

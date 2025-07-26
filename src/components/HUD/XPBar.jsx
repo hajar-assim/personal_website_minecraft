@@ -9,6 +9,7 @@ const XPBar = ({ xp, scale = 2 }) => {
       <img
         src="/assets/ui/experience_bar_background.png"
         alt="xp background"
+        draggable={false}
         style={{
           position: 'absolute',
           top: 0,
@@ -21,6 +22,7 @@ const XPBar = ({ xp, scale = 2 }) => {
       <img
         src="/assets/ui/experience_bar_progress.png"
         alt="xp fill"
+        draggable={false}
         style={{
           position: 'absolute',
           top: 0,

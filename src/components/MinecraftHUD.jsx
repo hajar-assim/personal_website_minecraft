@@ -51,6 +51,7 @@ const MinecraftHUD = ({ level = 3, hearts = 10, hunger = 5, xp = 1.0 }) => {
         >
           <img
             src="/assets/icons/level_three.png"
+            draggable={false}
             alt="container"
             style={{
               position: 'absolute',

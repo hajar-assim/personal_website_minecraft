@@ -30,6 +30,7 @@ const Books = ({ books }) => {
           }}
         >
           <img
+            draggable={false}
             src={book.image}
             alt={book.title}
             style={{

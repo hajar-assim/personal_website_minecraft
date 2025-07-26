@@ -1,6 +1,6 @@
 import React from 'react';
 import ScrollablePanel from '../../helpers/ScrollablePanel';
-import JukeboxPlayer from '../JukeboxPlayer';
+import JukeboxPlayer from '../helpers/JukeboxPlayer';
 
 function AboutMe({ backgroundAudioRef }) {
   const iconSize = 16 * 1; // replace 4.5 with scale after
@@ -46,6 +46,7 @@ function AboutMe({ backgroundAudioRef }) {
           <img
             src={`/assets/icons/note.png`}
             alt={'note'}
+            draggable={false}
             style={{
               width: `${iconSize}px`,
               height: `${iconSize}px`,
