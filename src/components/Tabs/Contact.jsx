@@ -6,7 +6,7 @@ function Contact() {
       <p>feel free to reach out or learn more</p>
       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'left', gap: '2rem' }}>
         <img
-          src="/assets/invite.png"
+          src="/assets/icons/invite.png"
           alt="email"
           style={{
             width: '70px',
@@ -17,7 +17,7 @@ function Contact() {
         />
 
         <img
-          src="/assets/linkedin.png"
+          src="/assets/icons/linkedin.png"
           alt="linkedin"
           style={{
             width: '70px',
@@ -30,7 +30,7 @@ function Contact() {
         />
 
         <img
-          src="/assets/github.svg"
+          src="/assets/icons/github.svg"
           alt="github"
           style={{
             width: '70px',

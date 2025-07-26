@@ -5,18 +5,23 @@ import TabLayout from './components/TabLayout';
 
 function App() {
   const audioRef = useRef(null);
+  const hasStarted = useRef(false);
 
   useEffect(() => {
     const audio = audioRef.current;
 
-    const enableAudio = () => {
-      if (audio) {
-        audio.play().catch(() => {});
+    const enableAudio = (e) => {
+      if (hasStarted.current) return;
+      if (!e.target.closest('.record')) {
+        if (audio) {
+          audio.play().catch(() => {});
+        }
+        hasStarted.current = true;
       }
-      window.removeEventListener('click', enableAudio);
     };
 
     window.addEventListener('click', enableAudio);
+    return () => window.removeEventListener('click', enableAudio);
   }, []);
 
   return (
@@ -26,17 +31,17 @@ function App() {
         height: '100vh',
         position: 'relative',
         overflow: 'hidden',
-        backgroundImage: "url('/assets/background_1.png')",
+        backgroundImage: "url('/assets/background/background_1.png')",
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
       }}
     >
       <div style={{ position: 'absolute', top: '8rem', left: 0, right: 0 }}>
-        <TabLayout />
+        <TabLayout backgroundAudioRef={audioRef} />
       </div>
       <MinecraftHUD />
-      <audio ref={audioRef} src="/assets/background_music_c418.mp3" loop hidden />
+      <audio ref={audioRef} src="/assets/background/background_music_c418.mp3" loop hidden />
       <video
         autoPlay
         loop
@@ -52,7 +57,7 @@ function App() {
           zIndex: -1,
         }}
       >
-        <source src="/assets/background.mp4" type="video/mp4" />
+        <source src="/assets/background/background.mp4" type="video/mp4" />
       </video>
     </div>
   );

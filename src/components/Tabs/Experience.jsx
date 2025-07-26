@@ -1,9 +1,79 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
+import Crafting from '../Crafting';
+import SearchPanel from './SearchPanel';
 
 function Experience() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'e' || event.key === 'E') {
+        setShowPopup((prev) => !prev);
+      }
+      if (event.key === 'Escape') {
+        setShowPopup(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  const popup = (
+    <div
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)', // the dim background behind popup
+        zIndex: 9999,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          gap: '1rem',
+          padding: '1rem',
+          backgroundColor: 'transparent',
+          maxWidth: '90vw',
+          maxHeight: '90vh',
+        }}
+      >
+        <SearchPanel />
+        <Crafting />
+      </div>
+    </div>
+  );
+
   return (
-    <div>Experience</div>
-  )
+    <>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          gap: '1rem',
+        }}
+      >
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'baseline' }}>
+          <img
+            src="/assets/icons/axolotyl.png"
+            alt="search"
+            style={{ width: '100px', height: '70px' }}
+          />
+          <p>Press E to craft...</p>
+        </div>
+      </div>
+
+      {showPopup && typeof window !== 'undefined' && ReactDOM.createPortal(popup, document.body)}
+    </>
+  );
 }
 
-export default Experience
+export default Experience;

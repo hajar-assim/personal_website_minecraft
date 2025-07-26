@@ -73,7 +73,7 @@ const ScrollablePanel = ({ children }) => {
 
       <img
         ref={thumbRef}
-        src="/assets/scroller.png"
+        src="/assets/ui/scroller.png"
         alt="scroll"
         onMouseDown={handleMouseDown}
         style={{

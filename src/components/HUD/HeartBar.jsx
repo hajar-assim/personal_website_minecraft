@@ -15,7 +15,7 @@ const HeartBar = ({ hearts, iconSize }) => (
         style={{ position: 'relative', width: iconSize, height: iconSize, flex: '0 0 auto' }}
       >
         <img
-          src="/assets/heart-empty.png"
+          src="/assets/icons/heart-empty.png"
           alt="container"
           style={{
             position: 'absolute',
@@ -28,7 +28,7 @@ const HeartBar = ({ hearts, iconSize }) => (
         />
         {i < hearts && (
           <img
-            src="/assets/heart.png"
+            src="/assets/icons/heart.png"
             alt="heart"
             style={{
               position: 'absolute',

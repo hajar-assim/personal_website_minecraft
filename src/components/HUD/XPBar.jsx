@@ -7,7 +7,7 @@ const XPBar = ({ xp, scale = 2 }) => {
   return (
     <div style={{ position: 'relative', width: `${barWidth}px`, height: `${barHeight}px` }}>
       <img
-        src="/assets/experience_bar_background.png"
+        src="/assets/ui/experience_bar_background.png"
         alt="xp background"
         style={{
           position: 'absolute',
@@ -19,7 +19,7 @@ const XPBar = ({ xp, scale = 2 }) => {
         }}
       />
       <img
-        src="/assets/experience_bar_progress.png"
+        src="/assets/ui/experience_bar_progress.png"
         alt="xp fill"
         style={{
           position: 'absolute',

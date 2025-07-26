@@ -1,7 +1,9 @@
 import React from 'react';
 import ScrollablePanel from '../../helpers/ScrollablePanel';
+import JukeboxPlayer from '../JukeboxPlayer';
 
-function AboutMe() {
+function AboutMe({ backgroundAudioRef }) {
+  const iconSize = 16 * 1; // replace 4.5 with scale after
   return (
     <ScrollablePanel>
       <div
@@ -34,9 +36,26 @@ function AboutMe() {
           figuring out how all the layers of a system fit together.
         </p>
         <p>
-          Outside of all this tech stuff, I’m probably gaming (if that wasn’t already plainly obvious),
-          sketching with watercolors, or learning a new piano piece that’s a way out of my league.
+          Outside of all this tech stuff, I’m probably gaming (if that wasn’t already plainly
+          obvious), sketching with watercolors, or learning a new piano piece that’s a way out of my
+          league.
         </p>
+        <p>
+          Below are some of my favourite piano pieces, currently trying to learn Idea22. Drag and
+          drop a disc into the jukebox to play it!
+          <img
+            src={`/assets/icons/note.png`}
+            alt={'note'}
+            style={{
+              width: `${iconSize}px`,
+              height: `${iconSize}px`,
+              imageRendering: 'pixelated',
+            }}
+          />
+        </p>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <JukeboxPlayer backgroundAudioRef={backgroundAudioRef} />
+        </div>
       </div>
     </ScrollablePanel>
   );
