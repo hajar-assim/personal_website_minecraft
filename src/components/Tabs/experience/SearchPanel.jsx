@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import MinecraftSearchBar from '../helpers/SearchBar';
-import { playClickSound } from '../helpers/helperFunctions.js';
-import { renderFormattedTooltip, tooltipStyle } from '../../helpers/TextStyling.jsx';
-import { experiencesList } from '../data/experiences.js';
+import MinecraftSearchBar from './SearchBar.jsx';
+import { experiencesList } from '../../data/experiences.js';
+import { playClickSound } from '../../helpers/helperFunctions.js';
+import { renderFormattedTooltip, tooltipStyle } from '../../../helpers/TextStyling.jsx';
 
 function SearchPanel({ onSelectExperience }) {
   const [search, setSearch] = useState('');
@@ -88,7 +88,6 @@ function SearchPanel({ onSelectExperience }) {
                 onClick={() => {
                   playClickSound();
                   onSelectExperience(item);
-                  console.log(`Selected experience: ${item.title}`);
                 }}
                 style={{
                   position: 'absolute',

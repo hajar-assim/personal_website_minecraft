@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import Crafting from '../helpers/Crafting';
+import Crafting from './Crafting';
 import SearchPanel from './SearchPanel';
 
 function Experience() {
