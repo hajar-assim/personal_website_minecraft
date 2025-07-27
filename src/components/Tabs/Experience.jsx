@@ -5,6 +5,7 @@ import SearchPanel from './SearchPanel';
 
 function Experience() {
   const [showPopup, setShowPopup] = useState(false);
+  const [selectedExperience, setSelectedExperience] = useState(null);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -51,8 +52,8 @@ function Experience() {
           maxHeight: '90vh',
         }}
       >
-        <SearchPanel />
-        <Crafting />
+        <SearchPanel onSelectExperience={setSelectedExperience} />
+        <Crafting selectedExperience={selectedExperience} />
       </div>
     </div>
   );

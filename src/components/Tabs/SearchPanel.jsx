@@ -2,55 +2,13 @@ import React, { useState } from 'react';
 import MinecraftSearchBar from '../helpers/SearchBar';
 import { playClickSound } from '../helpers/helperFunctions.js';
 import { renderFormattedTooltip, tooltipStyle } from '../../helpers/TextStyling.jsx';
+import { experiencesList } from '../data/experiences.js';
 
-function SearchPanel() {
+function SearchPanel({ onSelectExperience }) {
   const [search, setSearch] = useState('');
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const craftableItems = [
-    {
-      id: 1,
-      image: '/assets/icons/companies/solace.png',
-      title: 'Solace',
-      team: 'Cloud Infrastructure Team',
-      description: 'Workin on it',
-    },
-    {
-      id: 2,
-      image: '/assets/icons/companies/nokia.png',
-      title: 'Nokia',
-      team: 'OAM Team',
-      description:
-        'Worked as a member of the IP Routing OAM team, improving DMM/TWAMP test reliability, reducing packet loss, and refactoring stop logic to ensure memory safety and system stability in C/C++ routing environments.',
-    },
-    {
-      id: 3,
-      image: '/assets/icons/companies/entrust.png',
-      title: 'Entrust',
-      team: 'Verification Team',
-      description:
-        'Worked as a member of the Verification team, contributing to the Entrust cloud portal by enhancing UI, resolving bugs, and implementing features to streamline verification processes.',
-    },
-    {
-      id: 4,
-      image: '/assets/icons/companies/trend.png',
-      title: 'Trend Micro',
-      team: 'R&D Cloud One Workload Security Team',
-      description:
-        'Working on the R&D Cloud One Workload Security Team, aiding in driving the containerization of services within Deep Security Manager to improve deployment efficiency and scalability in AWS using Docker, Kubernetes, and AWS services.',
-    },
-    {
-      id: 5,
-      image: '/assets/icons/companies/solace.png',
-      title: 'Solace',
-      team: 'Observability Team',
-      description:
-        'Worked as a member of the PubSub+ Insights team, transitioning multiple pages from Aurelia to React, and implementing front-end testing strategies with Jest, Testing Library, and Cypress to enhance the Insights section of the operation console UI.',
-    },
-  ];
-
-  // 🧠 Filter based on search term (case-insensitive)
-  const filteredItems = craftableItems.filter((item) =>
+  const filteredItems = experiencesList.filter((item) =>
     [item.title, item.team, item.description].some((field) =>
       field.toLowerCase().includes(search.trim().toLowerCase())
     )
@@ -127,7 +85,11 @@ function SearchPanel() {
                 src={item.image}
                 alt="item"
                 draggable={false}
-                onClick={playClickSound}
+                onClick={() => {
+                  playClickSound();
+                  onSelectExperience(item);
+                  console.log(`Selected experience: ${item.title}`);
+                }}
                 style={{
                   position: 'absolute',
                   top: '3px',

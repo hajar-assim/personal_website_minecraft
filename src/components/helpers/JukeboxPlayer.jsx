@@ -29,7 +29,7 @@ const records = [
   },
 ];
 
-const clickSound = new Audio('/assets/background/music/minecraft_click.mp3');
+const clickSound = new Audio('/assets/background/music/minecraft_click_trimmed.m4a');
 
 const JukeboxPlayer = ({ backgroundAudioRef }) => {
   const iconSize = 16 * 4.5; // replace 4.5 with scale after
