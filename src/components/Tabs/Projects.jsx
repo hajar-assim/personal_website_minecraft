@@ -19,7 +19,7 @@ const Projects = ({ projects }) => {
     >
       {/* Left chest */}
       <img
-        src="/assets/ui/chest_slots.png"
+        src="./assets/ui/chest_slots.png"
         alt="Left Chest"
         style={{
           position: 'absolute',
@@ -32,7 +32,7 @@ const Projects = ({ projects }) => {
 
       {/* Right chest */}
       <img
-        src="/assets/ui/chest_slots.png"
+        src="./assets/ui/chest_slots.png"
         alt="Right Chest"
         style={{
           position: 'absolute',

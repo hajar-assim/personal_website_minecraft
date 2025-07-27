@@ -26,14 +26,14 @@ function SearchPanel({ onSelectExperience }) {
         }}
       >
         <img
-          src="/assets/ui/crafting/recipe_book.png"
+          src="./assets/ui/crafting/recipe_book.png"
           alt="search"
           draggable={false}
           style={{ display: 'block', imageRendering: 'pixelated' }}
         />
 
         <img
-          src="/assets/ui/crafting/filter_enabled.png"
+          src="./assets/ui/crafting/filter_enabled.png"
           alt="icon"
           draggable={false}
           style={{
@@ -69,7 +69,7 @@ function SearchPanel({ onSelectExperience }) {
               style={{ position: 'relative', width: '24px', height: '24px' }}
             >
               <img
-                src="/assets/ui/crafting/slot_craftable.png"
+                src="./assets/ui/crafting/slot_craftable.png"
                 alt="slot"
                 draggable={false}
                 style={{

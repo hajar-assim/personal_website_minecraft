@@ -8,11 +8,11 @@ import { projects } from './data/projects';
 import { books } from './data/books';
 
 const TABS = [
-  { id: 'about me', icon: '/assets/icons/white_tulip.png', label: 'AboutMe' },
-  { id: 'experience', icon: '/assets/icons/experience_bottle.png', label: 'Experience' },
-  { id: 'projects', icon: '/assets/icons/chest_minecart.png', label: 'Projects' },
-  { id: 'books', icon: '/assets/icons/knowledge_book.png', label: 'Books' },
-  { id: 'contact', icon: '/assets/icons/spyglass.png', label: 'Contact' },
+  { id: 'about me', icon: './assets/icons/white_tulip.png', label: 'AboutMe' },
+  { id: 'experience', icon: './assets/icons/experience_bottle.png', label: 'Experience' },
+  { id: 'projects', icon: './assets/icons/chest_minecart.png', label: 'Projects' },
+  { id: 'books', icon: './assets/icons/knowledge_book.png', label: 'Books' },
+  { id: 'contact', icon: './assets/icons/spyglass.png', label: 'Contact' },
 ];
 
 const TabLayout = ({ backgroundAudioRef }) => {
@@ -44,8 +44,8 @@ const TabLayout = ({ backgroundAudioRef }) => {
           {TABS.map((tab, index) => {
             const isActive = activeTab === tab.id;
             const tabImg = isActive
-              ? `/assets/ui/tab_selected_${index + 1}.png`
-              : '/assets/ui/tab_unselected.png';
+              ? `./assets/ui/tab_selected_${index + 1}.png`
+              : './assets/ui/tab_unselected.png';
 
             return (
               <div
@@ -96,7 +96,7 @@ const TabLayout = ({ backgroundAudioRef }) => {
           style={{
             width: '1000px', // expanded width
             height: '670px', // fixed height prevents unwanted growth
-            backgroundImage: "url('/assets/ui/panel_background.png')",
+            backgroundImage: "url('./assets/ui/panel_background.png')",
             backgroundSize: '100% 100%', // or use '100% 100%' to stretch explicitly
             backgroundRepeat: 'no-repeat',
             imageRendering: 'pixelated',

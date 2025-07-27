@@ -44,7 +44,7 @@ function AboutMe({ backgroundAudioRef }) {
           Below are some of my favourite piano pieces, currently trying to learn Idea22. Drag and
           drop a disc into the jukebox to play it!
           <img
-            src={`/assets/icons/note.png`}
+            src={`./assets/icons/note.png`}
             alt={'note'}
             draggable={false}
             style={{

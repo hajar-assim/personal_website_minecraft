@@ -27,7 +27,7 @@ function Crafting({ selectedExperience }) {
     >
       {/* Crafting table background */}
       <img
-        src="/assets/ui/crafting/crafting_table.png"
+        src="./assets/ui/crafting/crafting_table.png"
         alt="crafting"
         draggable={false}
         style={{

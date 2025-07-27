@@ -11,7 +11,7 @@ const HotBar = ({ hotbar, scale = 2 }) => {
   return (
     <div style={{ position: 'relative', width: `${barWidth}px`, height: `${barHeight}px` }}>
       <img
-        src="/assets/ui/hotbar.png"
+        src="./assets/ui/hotbar.png"
         alt="hotbar"
         draggable={false}
         style={{

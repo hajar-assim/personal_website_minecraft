@@ -69,7 +69,7 @@ function Experience() {
       >
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'baseline' }}>
           <img
-            src="/assets/icons/axolotyl.png"
+            src="./assets/icons/axolotyl.png"
             alt="search"
             style={{ width: '100px', height: '70px' }}
           />

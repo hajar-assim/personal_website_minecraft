@@ -7,7 +7,7 @@ function Contact() {
       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'left', gap: '2rem' }}>
         <img
           draggable={false}
-          src="/assets/icons/invite.png"
+          src="./assets/icons/invite.png"
           alt="email"
           draggable={false}
           style={{
@@ -19,7 +19,7 @@ function Contact() {
         />
 
         <img
-          src="/assets/icons/linkedin.png"
+          src="./assets/icons/linkedin.png"
           alt="linkedin"
           draggable={false}
           style={{
@@ -33,7 +33,7 @@ function Contact() {
         />
 
         <img
-          src="/assets/icons/github.svg"
+          src="./assets/icons/github.svg"
           alt="github"
           draggable={false}
           style={{

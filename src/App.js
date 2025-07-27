@@ -31,7 +31,7 @@ function App() {
         height: '100vh',
         position: 'relative',
         overflow: 'hidden',
-        backgroundImage: "url('/assets/background/background_1.png')",
+        backgroundImage: "url('./assets/background/background_1.png')",
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -41,7 +41,7 @@ function App() {
         <TabLayout backgroundAudioRef={audioRef} />
       </div>
       <MinecraftHUD />
-      <audio ref={audioRef} src="/assets/background/background_music_c418.mp3" loop hidden />
+      <audio ref={audioRef} src="./assets/background/background_music_c418.mp3" loop hidden />
       <video
         autoPlay
         loop
@@ -57,7 +57,7 @@ function App() {
           zIndex: -1,
         }}
       >
-        <source src="/assets/background/background_1.webm" type="video/webm" />
+        <source src="./assets/background/background_1.webm" type="video/webm" />
       </video>
     </div>
   );

@@ -5,31 +5,31 @@ const records = [
   {
     id: 1,
     title: 'Idea22',
-    audio: '/assets/background/music/idea_22.mp3',
+    audio: './assets/background/music/idea_22.mp3',
   },
   {
     id: 2,
     title: "Merry-Go-Round of Life \nHowl's Moving Castle",
-    audio: '/assets/background/music/howls_moving_castle.mp3',
+    audio: './assets/background/music/howls_moving_castle.mp3',
   },
   {
     id: 3,
     title: "Comptine d'un autre été - Amélie",
-    audio: '/assets/background/music/comptine.mp3',
+    audio: './assets/background/music/comptine.mp3',
   },
   {
     id: 4,
     title: 'Chopin - Nocturne op.9 No.2',
-    audio: '/assets/background/music/chopin.mp3',
+    audio: './assets/background/music/chopin.mp3',
   },
   {
     id: 5,
     title: 'Do what you are doing',
-    audio: '/assets/background/music/do.mp3',
+    audio: './assets/background/music/do.mp3',
   },
 ];
 
-const clickSound = new Audio('/assets/background/music/minecraft_click_trimmed.m4a');
+const clickSound = new Audio('./assets/background/music/minecraft_click_trimmed.m4a');
 
 const JukeboxPlayer = ({ backgroundAudioRef }) => {
   const iconSize = 16 * 4.5; // replace 4.5 with scale after
@@ -104,7 +104,7 @@ const JukeboxPlayer = ({ backgroundAudioRef }) => {
           >
             <img
               className="record"
-              src={`/assets/icons/music_disc_${record.id}.png`}
+              src={`./assets/icons/music_disc_${record.id}.png`}
               alt={record.title}
               style={{ width: '100%', height: '100%', imageRendering: 'pixelated' }}
             />
@@ -127,7 +127,7 @@ const JukeboxPlayer = ({ backgroundAudioRef }) => {
         ))}
       </div>
       <img
-        src={`/assets/ui/right_arrow.png`}
+        src={`./assets/ui/right_arrow.png`}
         alt={'arrow'}
         style={{
           width: `${iconSize + 20}px`,
@@ -150,7 +150,7 @@ const JukeboxPlayer = ({ backgroundAudioRef }) => {
           style={{
             width: '90px',
             height: '90px',
-            backgroundImage: 'url(/assets/icons/jukebox_top.png)',
+            backgroundImage: 'url(./assets/icons/jukebox_top.png)',
             backgroundSize: 'cover',
             imageRendering: 'pixelated',
             border: '2px dashed #aaa',
@@ -162,7 +162,7 @@ const JukeboxPlayer = ({ backgroundAudioRef }) => {
       </div>
 
       <img
-        src="/assets/icons/stop_button.png"
+        src="./assets/icons/stop_button.png"
         draggable={false}
         alt="Stop Disc"
         onClick={stopAudio}

@@ -1,7 +1,7 @@
 export const experiencesList = [
   {
     id: 1,
-    image: '/assets/icons/companies/solace.png',
+    image: './assets/icons/companies/solace.png',
     title: 'Solace',
     team: 'Cloud Infrastructure Team',
     skills: ['java', 'spring boot', 'react', 'kubernetes', 'helm', 'java', 'mysql'],
@@ -9,7 +9,7 @@ export const experiencesList = [
   },
   {
     id: 2,
-    image: '/assets/icons/companies/nokia.png',
+    image: './assets/icons/companies/nokia.png',
     title: 'Nokia',
     team: 'OAM Team',
     skills: ['c programming', 'networking'],
@@ -18,7 +18,7 @@ export const experiencesList = [
   },
   {
     id: 3,
-    image: '/assets/icons/companies/entrust.png',
+    image: './assets/icons/companies/entrust.png',
     title: 'Entrust',
     team: 'Verification Team',
     skills: ['docker', 'spring boot', 'java', 'mysql'],
@@ -27,7 +27,7 @@ export const experiencesList = [
   },
   {
     id: 4,
-    image: '/assets/icons/companies/trend.png',
+    image: './assets/icons/companies/trend.png',
     title: 'Trend Micro',
     team: 'R&D Cloud One Workload Security Team',
     skills: ['java', 'aws', 'kubernetes', 'docker'],
@@ -36,7 +36,7 @@ export const experiencesList = [
   },
   {
     id: 5,
-    image: '/assets/icons/companies/solace.png',
+    image: './assets/icons/companies/solace.png',
     title: 'Solace',
     team: 'Observability Team',
     skills: ['react', 'typescript', 'jest', 'python', 'datadog'],

@@ -15,7 +15,7 @@ const HungerBar = ({ hunger, iconSize }) => (
         style={{ position: 'relative', width: iconSize, height: iconSize, flex: '0 0 auto' }}
       >
         <img
-          src="/assets/icons/hunger-empty.png"
+          src="./assets/icons/hunger-empty.png"
           alt="container"
           draggable={false}
           style={{
@@ -29,7 +29,7 @@ const HungerBar = ({ hunger, iconSize }) => (
         />
         {i < hunger && (
           <img
-            src="/assets/icons/hunger.png"
+            src="./assets/icons/hunger.png"
             alt="hunger"
             draggable={false}
             style={{
