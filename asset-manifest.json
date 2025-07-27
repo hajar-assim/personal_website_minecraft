@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/personal_website_minecraft/static/css/main.fc4e79e5.chunk.css",
+    "main.js": "/personal_website_minecraft/static/js/main.31a502a8.chunk.js",
+    "main.js.map": "/personal_website_minecraft/static/js/main.31a502a8.chunk.js.map",
+    "runtime~main.js": "/personal_website_minecraft/static/js/runtime~main.e5020eaf.js",
+    "runtime~main.js.map": "/personal_website_minecraft/static/js/runtime~main.e5020eaf.js.map",
+    "static/js/2.306f7ad5.chunk.js": "/personal_website_minecraft/static/js/2.306f7ad5.chunk.js",
+    "static/js/2.306f7ad5.chunk.js.map": "/personal_website_minecraft/static/js/2.306f7ad5.chunk.js.map",
+    "index.html": "/personal_website_minecraft/index.html",
+    "precache-manifest.3e474d370e61aee581884b7f72f0113e.js": "/personal_website_minecraft/precache-manifest.3e474d370e61aee581884b7f72f0113e.js",
+    "service-worker.js": "/personal_website_minecraft/service-worker.js",
+    "static/css/main.fc4e79e5.chunk.css.map": "/personal_website_minecraft/static/css/main.fc4e79e5.chunk.css.map"
+  }
+}
