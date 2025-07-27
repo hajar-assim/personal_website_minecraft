@@ -34,7 +34,7 @@ export const projects = [
       'a site built with a team of other students, designed to help guide first year engineering students at carleton with resources, schedules, and the answered to FAQs',
     tech: 'react • javascript',
     image: './assets/icons/lantern.png',
-    link: 'https://github.com/hajar-assim/sysc-site',
+    link: 'https://hajar-assim.github.io/sysc-site/',
   },
   {
     id: 5,
@@ -53,5 +53,13 @@ export const projects = [
     tech: 'python • tensorflow • opencv • slack_sdk • slack_bolt',
     image: './assets/icons/cooked_mutton.png',
     link: 'https://github.com/hajar-assim/LunchBox-AI',
+  },
+  {
+    id: 6,
+    name: 'leetcode solutions',
+    description: 'please',
+    tech: 'java',
+    image: './assets/icons/backpack.png',
+    link: 'https://github.com/hajar-assim/leetcode-sol',
   },
 ];
