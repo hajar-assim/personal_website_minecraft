@@ -57,7 +57,7 @@ function App() {
           zIndex: -1,
         }}
       >
-        <source src="/assets/background/background.mp4" type="video/mp4" />
+        <source src="/assets/background/background_1.webm" type="video/webm" />
       </video>
     </div>
   );
