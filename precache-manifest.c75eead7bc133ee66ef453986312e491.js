@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3bd4f87116077d2e702011785da51adc",
+    "revision": "070d92e86bdbb7dd6520249da6965a64",
     "url": "/personal_website_minecraft/index.html"
   },
   {
-    "revision": "9171283d87691eb3e246",
+    "revision": "00538f1f4a3fb9f2b9f1",
     "url": "/personal_website_minecraft/static/css/main.4eee789c.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/personal_website_minecraft/static/js/2.306f7ad5.chunk.js"
   },
   {
-    "revision": "9171283d87691eb3e246",
-    "url": "/personal_website_minecraft/static/js/main.01ce947d.chunk.js"
+    "revision": "00538f1f4a3fb9f2b9f1",
+    "url": "/personal_website_minecraft/static/js/main.98136809.chunk.js"
   },
   {
     "revision": "285adadfa23080be6cfb",
