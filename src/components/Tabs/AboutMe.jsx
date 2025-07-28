@@ -12,6 +12,7 @@ function AboutMe({ backgroundAudioRef }) {
           lineHeight: '1.5',
           color: 'black',
           paddingTop: '0.4rem',
+          marginBottom: '1.4rem',
           display: 'flex',
           flexDirection: 'column',
           gap: '1rem',
