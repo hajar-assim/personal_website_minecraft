@@ -100,6 +100,8 @@ const JukeboxPlayer = ({ backgroundAudioRef }) => {
               height: `${iconSize}px`,
               position: 'relative',
               cursor: 'grab',
+              transform: hoveredRecord === record.id ? 'scale(1.05)' : 'scale(1)',
+              transition: 'transform 0.1s ease',
             }}
           >
             <img

@@ -65,15 +65,24 @@ function Experience() {
           display: 'flex',
           flexDirection: 'row',
           gap: '1rem',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'baseline' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '0.5rem',
+          }}
+        >
           <img
-            src="./assets/icons/axolotyl.png"
+            src="./assets/icons/bee.gif"
             alt="search"
-            style={{ width: '100px', height: '70px' }}
+            style={{ width: '100px', height: '100px' }}
           />
-          <p>Press E to craft...</p>
+          <p>Press 'E' to craft...</p>
         </div>
       </div>
 

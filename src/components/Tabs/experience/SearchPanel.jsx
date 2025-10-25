@@ -9,7 +9,7 @@ function SearchPanel({ onSelectExperience }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const filteredItems = experiencesList.filter((item) =>
-    [item.title, item.team, item.description].some((field) =>
+    [item.title, item.team, item.dates, item.description].some((field) =>
       field.toLowerCase().includes(search.trim().toLowerCase())
     )
   );
@@ -114,7 +114,7 @@ function SearchPanel({ onSelectExperience }) {
                   }}
                 >
                   {renderFormattedTooltip(
-                    `§f${item.title}\n§9§o${item.team}\n§7${item.description}`
+                    `§f${item.title}\n§9§o${item.team}\n§c${item.dates}\n§7${item.description}`
                   )}
                 </div>
               )}

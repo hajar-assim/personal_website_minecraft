@@ -1,6 +1,8 @@
 import React from 'react';
 import ScrollablePanel from '../../helpers/ScrollablePanel';
 import JukeboxPlayer from '../helpers/JukeboxPlayer';
+import GameCard from '../GameCard';
+import { favoriteGames } from '../data/games';
 
 function AboutMe({ backgroundAudioRef }) {
   const iconSize = 16 * 1; // replace 4.5 with scale after
@@ -19,7 +21,7 @@ function AboutMe({ backgroundAudioRef }) {
         }}
       >
         <p>
-          Hey, I’m Hajar - currently spending the summer at{' '}
+          Hey, I’m Hajar - currently spending the semester working at{' '}
           <a
             href="https://solace.com"
             target="_blank"
@@ -28,8 +30,9 @@ function AboutMe({ backgroundAudioRef }) {
           >
             Solace
           </a>{' '}
-          as a software developer on the infrastructure team. After that, I’ll be heading into my
-          final year of software engineering at Carleton :(? :)? .
+          as a software developer on the infrastructure team. Alongside that, I'm working through my
+          final year of courses to finish my degree for software engineering at
+          Carleton :(? :)? .
         </p>
         <p>
           I’ve dabbled in a bit of everything - frontend, backend, systems, infrastructure, cloud
@@ -57,6 +60,21 @@ function AboutMe({ backgroundAudioRef }) {
         </p>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <JukeboxPlayer backgroundAudioRef={backgroundAudioRef} />
+        </div>
+        <p>Below are some of my favourite games! You should definitely try them out at some point in your lifetime~</p>
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '1rem',
+            justifyContent: 'center',
+            marginTop: '1rem',
+            marginBottom: '1rem',
+          }}
+        >
+          {favoriteGames.map((game) => (
+            <GameCard key={game.id} gameName={game.name} iconPath={game.icon} size={64} />
+          ))}
         </div>
       </div>
     </ScrollablePanel>
