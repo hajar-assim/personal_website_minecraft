@@ -5,8 +5,6 @@ const ScrollablePanel = ({ children }) => {
   const thumbRef = useRef(null);
   const [thumbTop, setThumbTop] = useState(0);
   const [dragging, setDragging] = useState(false);
-  const [startY, setStartY] = useState(0);
-  const [startScrollTop, setStartScrollTop] = useState(0);
 
   const updateThumbPosition = () => {
     const container = scrollRef.current;
@@ -31,26 +29,27 @@ const ScrollablePanel = ({ children }) => {
 
   const handleMouseDown = (e) => {
     setDragging(true);
-    setStartY(e.clientY);
-    setStartScrollTop(scrollRef.current.scrollTop);
+    const startYPos = e.clientY;
+    const startScroll = scrollRef.current.scrollTop;
     e.preventDefault();
+
+    const handleMouseMove = (e) => {
+      const container = scrollRef.current;
+      if (!container) return;
+
+      const delta = e.clientY - startYPos;
+      const scrollRatio = container.scrollHeight / container.clientHeight;
+      container.scrollTop = startScroll + delta * scrollRatio;
+    };
+
+    const handleMouseUp = () => {
+      setDragging(false);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+    };
 
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseup', handleMouseUp);
-  };
-
-  const handleMouseMove = (e) => {
-    if (!dragging) return;
-    const container = scrollRef.current;
-    const delta = e.clientY - startY;
-    const scrollRatio = container.scrollHeight / container.clientHeight;
-    container.scrollTop = startScrollTop + delta * scrollRatio;
-  };
-
-  const handleMouseUp = () => {
-    setDragging(false);
-    window.removeEventListener('mousemove', handleMouseMove);
-    window.removeEventListener('mouseup', handleMouseUp);
   };
 
   return (
@@ -81,7 +80,7 @@ const ScrollablePanel = ({ children }) => {
           top: `${thumbTop}px`,
           right: '4px',
           width: '40px',
-          cursor: 'grab',
+          cursor: dragging ? 'grabbing' : 'grab',
           imageRendering: 'pixelated',
           userSelect: 'none',
         }}
